@@ -10,7 +10,7 @@ examples
 
     mpirun -n 25 minions < command-list.txt
 
-As test you can try the scripts from the /example
+As a test you can try the scripts from the /example
 sub-directory.
 
     ls example/*.sh | mpirun -n 4 minions
