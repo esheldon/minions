@@ -1,11 +1,13 @@
 CC=mpicc
-#CFLAGS=-std=gnu99 -Wall -Werror
+
+# can't use -Wall -Werror because mpicc is rather dumb about symbols
+# if you see warning: implicit declaration of function 'getline' it
+# is probably OK
 CFLAGS=-std=gnu99
 
 prefix := /usr/local
 
 SRC = minions.c
-
 OBJ = minions.o
 PROGRAM = minions
 
@@ -25,5 +27,5 @@ install: $(LIB) $(MAKE_INPUT_PROG)
 
 
 clean:
-	rm -f  core a.out *.o $(PROGRAM)
+	rm $(OBJ) $(PROGRAM)
 
