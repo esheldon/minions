@@ -25,5 +25,5 @@ install: $(LIB) $(MAKE_INPUT_PROG)
 
 
 clean:
-	rm -f  core a.out *.o minions
+	rm -f  core a.out *.o $(PROGRAM)
 
